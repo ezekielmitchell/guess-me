@@ -4,7 +4,7 @@ use std::io::stdin;
 use rand::Rng;
 
 fn main() {
-    let number = number(1);
+    let number = number();
 
     loop {
         setup();
@@ -14,16 +14,16 @@ fn main() {
             println!("You won! The correct number was : {}", user_input);
             break
         } else {
-            println!("Incorrect!\nYou entered : {}\n", &user_input);
+            println!("\nIncorrect!\nYou entered : {}\n", &user_input);
             continue
         }
     }
 }
 
-// generates a random int between 0 and 'max' value
-fn number(max: i32) -> i32 {
+// generates a random int between 0 and 5
+fn number() -> i32 {
     rand::thread_rng()
-        .gen_range(0..=max)
+        .gen_range(0..=5)
 }
 
 // read user input
@@ -41,5 +41,5 @@ fn user_input() -> i32 {
 }
 
 fn setup() {
-    println!("Enter an integer between 1-100")
+    println!("Enter an integer between 1-5")
 }

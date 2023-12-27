@@ -1,5 +1,5 @@
 [package]
-authors = Ezekiel
+authors = ["Ezekiel A. Mitchell <Ezekielam@icloud.com>"]
 name = "guess-me"
 version = "0.1.0"
 edition = "2021"
